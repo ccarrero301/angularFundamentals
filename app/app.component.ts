@@ -1,5 +1,18 @@
 import { Component } from "@angular/core";
 
+interface Child {
+  name: string;
+  age: number;
+}
+
+interface Passenger {
+  id: number;
+  fullname: string;
+  checkedIn: boolean;
+  checkInDate: number | null;
+  children: Child[] | null;
+}
+
 @Component({
   selector: 'app-root',
   styleUrls: ['app.component.scss'],
@@ -7,11 +20,33 @@ import { Component } from "@angular/core";
 })
 export class AppComponent {
   title: string;
-  isHappy: boolean = false;
   logo: string = 'img/Geralt.jpg'
-  name: string = 'Todd'
+  name: string = ''
+
+  isHappy: boolean = false;
+
   numberOne: number = 1;
   numberTwo: number = 2;
+
+  passengers: Passenger[] = [{
+    id: 1,
+    fullname: 'Stephen',
+    checkedIn: true,
+    checkInDate: 1490742000000,
+    children: [{ name: 'Ted', age: 12 }, { name: 'Chloe', age: 7 }]
+  }, {
+    id: 2,
+    fullname: 'Rose',
+    checkedIn: false,
+    checkInDate: null,
+    children: null
+  }, {
+    id: 3,
+    fullname: 'James',
+    checkedIn: true,
+    checkInDate: 1491606000000,
+    children: [{ name: 'Jessica', age: 1 }]
+  }];
 
   constructor() {
     this.title = 'Ultimate Angular';
