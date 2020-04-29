@@ -1,0 +1,43 @@
+<div class="app">
+  <h1 [innerHTML]="title" ></h1>
+  <h1> {{ title + '!' }} </h1>
+  <img [src]="logo" width="200px" height="100px">
+  <button (click)="handleClick()">
+    Change name
+  </button>
+  <div>
+    Property and event bindings
+  <input
+    type="text"
+    [value]="name"
+    (blur)="handleBlur($event)"
+    (input)='handleInput($event)'>
+  </div>
+  <div>
+    NgModel property and event bindings one way
+    <input
+      type="text"
+      [ngModel]="name"
+      (ngModelChange)="handleChange($event)">
+  </div>
+  <div>
+    NgModel property and event bindings two way
+    <input
+      type="text"
+      [(ngModel)]="name">
+  </div>
+  <div>
+    #ref variables
+    <button (click)="getValue(username.value)">Get Value</button>
+    <input type="text" #username>
+  </div>
+  <div>
+    {{ name }}
+  </div>
+  <div>
+    {{ numberOne + numberTwo }}
+  </div>
+  <div>
+    {{ isHappy ? ':)' : ':(' }}
+  </div>
+</div>
