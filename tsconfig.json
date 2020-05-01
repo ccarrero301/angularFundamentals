@@ -11,7 +11,7 @@
     "sourceMap": true,
     "strictNullChecks": false,
     "moduleResolution": "node",
-    "skipLibCheck": true
+    "skipLibCheck": false
   },
   "exclude": [
     "node_modules"
