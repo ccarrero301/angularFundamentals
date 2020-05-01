@@ -3,5 +3,5 @@ export interface Passenger {
   fullname: string;
   checkedIn: boolean;
   checkInDate?: number;
-  bagage: string;
+  baggage: string;
 }

@@ -1,14 +1,16 @@
 {
   "compilerOptions": {
+    "module": "commonjs",
     "target": "es5",
+    "lib": ["es5", "dom"],
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "noEmitHelpers": true,
     "pretty": true,
     "sourceMap": true,
-    "lib": ["es5", "dom"],
     "strictNullChecks": false,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "skipLibCheck": true
   },
   "exclude": [
     "node_modules"
